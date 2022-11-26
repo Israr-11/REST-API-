@@ -1,0 +1,26 @@
+###Using Rest Client extension for testing Api before helpful usually before using APi in frontend
+
+###Get all the products
+GET http://localhost:9000/api/books HTTP/1.1
+
+###Add Book title and author
+POST http://localhost:9000/api/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"Programming",
+    "author":"Israr"
+}
+
+###Patch 
+PATCH http://localhost:9000/api/books/63803e103f9a212fe5a51e1a HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "title":"Coding"
+}
+
+###Delete
+DELETE http://localhost:9000/api/books/637e0e65c0376f47757557b3 HTTP/1.1
+Content-Type: application/json
