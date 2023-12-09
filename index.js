@@ -10,9 +10,11 @@ dotenv.config();
 
 //Database connection (MongodB cloud)
 mongoose.connect(
-    process.env.DB_CONNECTION,
-    { useUnifiedTopology: true, useNewUrlParser: true },
-    () => { console.log("Connected to MongodB Database") }
+  process.env.DB_CONNECTION,
+  { useUnifiedTopology: true, useNewUrlParser: true },
+  () => {
+    console.log("Connected to MongodB Database");
+  }
 );
 
 //importing routes
@@ -26,5 +28,5 @@ app.use("/api/books", bookRoutes);
 //Litening at a port
 const port = process.env.PORT || 9000;
 app.listen(port, () => {
-    console.log("Listening")
+  console.log("Listening");
 });
